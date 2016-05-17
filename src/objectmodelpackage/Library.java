@@ -5,6 +5,10 @@ import java.util.ArrayList;
 /**
  * Created by deepaksood619 on 17/5/16.
  */
+
+
+// Inheritance and encapsulation used
+
 public class Library extends Institute{
     private ArrayList<Books> booksArrayList;
 
@@ -32,10 +36,6 @@ public class Library extends Institute{
 
     public ArrayList<Books> getBooksArrayList() {
         return booksArrayList;
-    }
-
-    public void setBooksArrayList(ArrayList<Books> booksArrayList) {
-        this.booksArrayList = booksArrayList;
     }
 
     public void addBookToLibrary(Books books) {

@@ -5,6 +5,9 @@ import java.util.ArrayList;
 /**
  * Created by deepaksood619 on 17/5/16.
  */
+
+// Inheritance and encapsulation used
+
 public class Student extends Institute {
     private String studentName;
     private String studentId;
@@ -67,32 +70,16 @@ public class Student extends Institute {
         return studentName;
     }
 
-    public void setStudentName(String studentName) {
-        this.studentName = studentName;
-    }
-
     public String getStudentId() {
         return studentId;
-    }
-
-    public void setStudentId(String studentId) {
-        this.studentId = studentId;
     }
 
     public String getProgramEnrolledIn() {
         return programEnrolledIn;
     }
 
-    public void setProgramEnrolledIn(String programEnrolledIn) {
-        this.programEnrolledIn = programEnrolledIn;
-    }
-
     public ArrayList<Book> getIssuedBooks() {
         return issuedBooks;
-    }
-
-    public void setIssuedBooks(ArrayList<Book> issuedBooks) {
-        this.issuedBooks = issuedBooks;
     }
 
     public int getFine() {

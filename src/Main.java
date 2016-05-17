@@ -1,6 +1,5 @@
 import objectmodelpackage.*;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -9,11 +8,18 @@ import java.util.*;
 
 public class Main {
 
+    // String handling used
+    // polymorphism used
+    // encapsulation used
+    // abstraction used
+
     private static final int perDayFine = 10;
 
     private static ArrayList<Student> students;
     private static Library iiitdLibrary;
     private static Library dtuLibrary;
+
+    private static boolean outOfStock = false;
 
     public static void main(String[] args) {
 
@@ -339,7 +345,6 @@ public class Main {
         return null;
     }
 
-    private static boolean outOfStock = false;
     private static Book checkBookAvailable(Library library, String getBookName) {
         outOfStock = false;
         ArrayList<Books> booksArrayList = library.getBooksArrayList();
