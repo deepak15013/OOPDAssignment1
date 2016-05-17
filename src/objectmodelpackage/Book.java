@@ -1,17 +1,21 @@
 package objectmodelpackage;
 
-import java.util.Date;
-
 /**
  * Created by deepaksood619 on 17/5/16.
  */
+
 public class Book {
     private String bookName;
     private String bookAuthor;
-    private String borrowerName;
+    private String borrowerId;
     private String borrowDate;
     private String returnDate;
     private boolean pendingReturn;
+
+    public Book(Book book) {
+        this.bookName = book.getBookName();
+        this.bookAuthor = book.getBookAuthor();
+    }
 
     public Book(String bookName, String bookAuthor) {
         this.bookName = bookName;
@@ -34,12 +38,12 @@ public class Book {
         this.bookAuthor = bookAuthor;
     }
 
-    public String getBorrowerName() {
-        return borrowerName;
+    public String getBorrowerId() {
+        return borrowerId;
     }
 
-    public void setBorrowerName(String borrowerName) {
-        this.borrowerName = borrowerName;
+    public void setBorrowerId(String borrowerId) {
+        this.borrowerId = borrowerId;
     }
 
     public String getBorrowDate() {

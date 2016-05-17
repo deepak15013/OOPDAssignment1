@@ -10,6 +10,8 @@ public class Student extends Institute {
     private String studentId;
     private String programEnrolledIn;
 
+    private int fine;
+
     private ArrayList<Book> issuedBooks;
 
     private boolean iiitdLibraryCard;
@@ -29,13 +31,22 @@ public class Student extends Institute {
         issuedBooks = new ArrayList<>();
     }
 
-    private void issueCard(String instituteName) {
+    public int issueCard(String instituteName) {
         if(instituteName.equals("IIITD")) {
+            if(iiitdLibraryCard) {
+                return 2;
+            }
             iiitdLibraryCard = true;
+            return 1;
         }
         if(instituteName.equals("DTU")) {
+            if(dtuLibraryCard) {
+                return 2;
+            }
             dtuLibraryCard = true;
+            return 1;
         }
+        return 0;
     }
 
     public boolean hasLibraryAccess(String instituteName) {
@@ -82,5 +93,13 @@ public class Student extends Institute {
 
     public void setIssuedBooks(ArrayList<Book> issuedBooks) {
         this.issuedBooks = issuedBooks;
+    }
+
+    public int getFine() {
+        return fine;
+    }
+
+    public void setFine(int fine) {
+        this.fine = fine;
     }
 }

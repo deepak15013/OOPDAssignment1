@@ -42,6 +42,17 @@ public class Library extends Institute{
         booksArrayList.add(books);
     }
 
+    public Books findBooksCollection(String findThisBook) {
+        for(Books books : booksArrayList) {
+            for(Book book : books.getBooks()) {
+                if(book.getBookName().equals(findThisBook)) {
+                    return books;
+                }
+            }
+        }
+        return null;
+    }
+
     public RulesResultSet iiitdRules(String instituteName, String programEnrolledIn) {
         if(instituteName.equals("IIITD")) {
             switch (programEnrolledIn) {
