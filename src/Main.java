@@ -142,11 +142,14 @@ public class Main {
     }
 
     private static void calculateFine(Student student, String borrowDate, String returnDate) {
+
+        String todaysDate = "31/05/2016";
+
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         try {
-            LocalDate borDate = LocalDate.parse(borrowDate, formatter);
-            LocalDate retDate = LocalDate.parse(returnDate, formatter);
-            long days = ChronoUnit.DAYS.between(borDate, retDate);
+            LocalDate borDate = LocalDate.parse(returnDate, formatter);
+            LocalDate retDate = LocalDate.parse(todaysDate, formatter);
+            long days = ChronoUnit.DAYS.between(retDate, borDate);
 
             if (days < 0) {
                 int numOfDays = (int) Math.abs(days);
